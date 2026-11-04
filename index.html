@@ -6,26 +6,20 @@
   <meta name="robots" content="noindex,nofollow">
   <title>BarBQ — экран для OBS</title>
   <style>
-    * { box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: transparent; }
-    body { display: grid; place-items: center; color: #f4f6f8; font-family: "Segoe UI", Arial, sans-serif; }
-    .screen { position: relative; width: min(1120px, 86vw); padding: 48px 60px 52px; overflow: hidden; border: 1px solid rgba(255,255,255,.13); border-radius: 30px; background: linear-gradient(135deg, rgba(18,23,29,.96), rgba(28,35,41,.92)); box-shadow: 0 28px 100px rgba(0,0,0,.42), inset 0 1px rgba(255,255,255,.08); animation: arrive .65s cubic-bezier(.2,.8,.2,1) both; }
-    .screen::before { content: ""; position: absolute; width: 520px; height: 520px; right: -210px; top: -330px; border-radius: 50%; background: #b4f27a; filter: blur(100px); opacity: .16; pointer-events: none; }
-    .topline { position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 30px; color: #c6d0d7; font-size: 18px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
-    .signal { width: 10px; height: 10px; border-radius: 50%; background: #b4f27a; box-shadow: 0 0 18px rgba(180,242,122,.8); }
-    h1 { position: relative; margin: 0; max-width: 100%; font-size: clamp(48px, 5vw, 112px); line-height: .98; letter-spacing: -.055em; font-weight: 850; }
-    p { position: relative; margin: 24px 0 0; color: #b7c0c8; font-size: clamp(21px, 1.7vw, 34px); line-height: 1.35; }
-    .bottom { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 42px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); color: #83909a; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; }
-    .brand { color: #eef3f5; font-weight: 800; }
-    @keyframes arrive { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
-    @media (max-width: 700px) { .screen { width: 90vw; padding: 32px 28px; border-radius: 22px; } .topline { margin-bottom: 22px; font-size: 13px; } .bottom { margin-top: 28px; font-size: 11px; } }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
-  <main class="screen" aria-live="polite">
-    <div class="topline"><span class="signal"></span> BarBQ · LIVE CANVAS</div>
-    <p>Скажи, что вывести — и здесь появится нужная штука.</p>
-    <div class="bottom"><span class="brand">OBS browser source</span><span>2560 × 1440</span></div>
-  </main>
+  <!-- Пустой прозрачный холст OBS. Будущие элементы добавляются прямо сюда. -->
 </body>
 </html>
