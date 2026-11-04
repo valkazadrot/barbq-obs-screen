@@ -6,6 +6,7 @@
   <meta name="robots" content="noindex,nofollow">
   <title>BarBQ — экран для OBS</title>
   <style>
+    * { box-sizing: border-box; }
     html, body {
       width: 100%;
       height: 100%;
@@ -17,9 +18,35 @@
       font-family: "Segoe UI", Arial, sans-serif;
       color: #fff;
     }
+    .label {
+      position: absolute;
+      top: 6.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 92vw;
+      padding: 16px 44px 19px;
+      border: 3px solid rgba(255,255,255,.95);
+      border-radius: 22px;
+      background: rgba(7, 9, 13, .9);
+      box-shadow: 0 8px 0 rgba(0,0,0,.65), 0 0 28px rgba(0,0,0,.7);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .label span {
+      display: block;
+      color: #fff;
+      font-family: Impact, "Arial Black", "Franklin Gothic Heavy", sans-serif;
+      font-size: clamp(42px, 4.2vw, 100px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: .035em;
+      -webkit-text-stroke: 2px #101216;
+      paint-order: stroke fill;
+      text-shadow: 0 3px 0 #101216, 0 0 16px rgba(255,255,255,.25);
+    }
   </style>
 </head>
 <body>
-  <!-- Пустой прозрачный холст OBS. Будущие элементы добавляются прямо сюда. -->
+  <div class="label" aria-label="ТЕМП-ХУЕСОС"><span>ТЕМП-ХУЕСОС</span></div>
 </body>
 </html>
